@@ -1,12 +1,5 @@
 <?php
 
-/* #########################
-* This code was developed by:
-* Audox Ingeniería SpA.
-* website: www.audox.com
-* email: info@audox.com
-######################### */
-
 include 'auth.php';
 
 function getRecords($endpoint, $params){
@@ -71,6 +64,7 @@ $params = array(
 
 if($_REQUEST["action"] == "getRecords") $result = getRecords($_REQUEST['endpoint'], $params);
 
+header('Content-Type: application/json');
 echo json_encode($result);
 
 ?>
