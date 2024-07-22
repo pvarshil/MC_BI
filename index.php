@@ -14,7 +14,7 @@ function getRecords($endpoint, $params){
     $MailChimpDataCenter = $params['data_center'];
     $MailChimpApiKey = $params['api_key'];
 
-    $auth = base64_encode('user:'.$MailChimpApiKey);
+    $auth = base64_encode('user:' $MailChimpApiKey);
     $url = "https://$MailChimpDataCenter.api.mailchimp.com/3.0";
     $url_params = array();
     if(!empty($params['count'])) $url_params['count'] = $params['count'];
